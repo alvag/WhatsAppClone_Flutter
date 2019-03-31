@@ -15,7 +15,7 @@ List<ChatModel> messageData = [
         avatar:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Martin_Fowler_%282008%29.jpg/1200px-Martin_Fowler_%282008%29.jpg"),
     new ChatModel(
-        name: "Linux tolvar",
+        name: "Linux Torvalds",
         message: "Me encanta flutter!",
         time: "17:30",
         avatar:

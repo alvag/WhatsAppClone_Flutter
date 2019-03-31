@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone_flutter/models/chat.model.dart';
+import 'package:whatsapp_clone_flutter/pages/chat.page.dart';
 
 class ChatTab extends StatefulWidget {
     @override
@@ -40,6 +41,11 @@ class _ChatTabState extends State<ChatTab> {
                                 backgroundImage: NetworkImage(
                                     messageData[i].avatar),
                             ),
+                            onTap: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) => ChatPage(name: messageData[i].name,))
+                                );
+                            },
                         )
                     ],
                 ),
