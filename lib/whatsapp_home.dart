@@ -8,15 +8,19 @@ class WhatsAppHome extends StatefulWidget {
     @override
     _WhatsAppHomeState createState() => new _WhatsAppHomeState();
 }
-class _WhatsAppHomeState extends State<WhatsAppHome> with SingleTickerProviderStateMixin {
+
+class _WhatsAppHomeState extends State<WhatsAppHome>
+    with SingleTickerProviderStateMixin {
     TabController tabController;
 
     @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    tabController = new TabController(length: 4, initialIndex: 1, vsync: this);
-  }
+    void initState() {
+        // TODO: implement initState
+        super.initState();
+        tabController =
+        new TabController(length: 4, initialIndex: 1, vsync: this);
+    }
+
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -29,7 +33,9 @@ class _WhatsAppHomeState extends State<WhatsAppHome> with SingleTickerProviderSt
                         Tab(icon: Icon(Icons.camera_alt)),
                         Tab(text: 'CHATS'),
                         Tab(text: 'ESTADOS'),
-                        Tab(text: 'LLLAMADAS',)
+                        Tab(
+                            text: 'LLLAMADAS',
+                        )
                     ],
                 ),
             ),
