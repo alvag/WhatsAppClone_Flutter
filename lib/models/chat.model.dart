@@ -44,6 +44,6 @@ List<ChatModel> messageData = [
         message: "buenos días",
         time: "15:30",
         avatar:
-        "https://pbs.twimg.com/profile_images/959170433110237186/h-6Whguj_400x400.jpg"
+        "https://i.dailymail.co.uk/i/pix/2014/01/29/article-2547950-1B0C0E7D00000578-217_306x423.jpg"
     ),
 ];

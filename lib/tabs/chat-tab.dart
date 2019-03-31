@@ -1,16 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone_flutter/models/chat.model.dart';
 
-class ChatTab extends StatelessWidget {
+class ChatTab extends StatefulWidget {
+    @override
+    _ChatTabState createState() => _ChatTabState();
+}
+
+class _ChatTabState extends State<ChatTab> {
     @override
     Widget build(BuildContext context) {
-        return Container(
-            child: Center(
-                child: Column(
+        return ListView.builder(
+            itemCount: messageData.length,
+            itemBuilder: (context, i) =>
+                Column(
                     children: <Widget>[
-                        Text('ChatTab')
+                        Divider(
+                            height: 10,
+                        ),
+                        ListTile(
+                            title: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                    Text(messageData[i].name, style: TextStyle(
+                                        fontWeight: FontWeight.bold
+                                    ),),
+                                    Text(messageData[i].time, style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 13
+                                    ))
+                                ],
+                            ),
+                            subtitle: Container(
+                                padding: EdgeInsets.only(top: 5),
+                                child: Text(
+                                    messageData[i].message,
+                                )
+                            ),
+                            leading: CircleAvatar(
+                                backgroundImage: NetworkImage(
+                                    messageData[i].avatar),
+                            ),
+                        )
                     ],
                 ),
-            ),
         );
     }
 }
