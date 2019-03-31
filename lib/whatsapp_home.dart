@@ -15,7 +15,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome> with SingleTickerProviderSt
   void initState() {
     // TODO: implement initState
     super.initState();
-    tabController = new TabController(length: 4, vsync: this);
+    tabController = new TabController(length: 4, initialIndex: 1, vsync: this);
   }
     @override
     Widget build(BuildContext context) {
