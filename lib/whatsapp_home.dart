@@ -41,7 +41,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
                 children: <Widget>[
                     CameraTab(),
                     ChatTab(),
-                    StateTab(),
+                    StatusTab(),
                     CallsTab(),
                 ],
                 controller: tabController,
