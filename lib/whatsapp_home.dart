@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone_flutter/pages/contacts.page.dart';
 import 'package:whatsapp_clone_flutter/tabs/calls-tab.dart';
 import 'package:whatsapp_clone_flutter/tabs/camera-tab.dart';
 import 'package:whatsapp_clone_flutter/tabs/chat-tab.dart';
@@ -45,6 +46,20 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
                     CallsTab(),
                 ],
                 controller: tabController,
+            ),
+            floatingActionButton: FloatingActionButton(
+                backgroundColor: Theme
+                    .of(context)
+                    .accentColor,
+                child: Icon(
+                    Icons.message,
+                    color: Colors.white,
+                ),
+                onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ContactsPage())
+                    );
+                }
             ),
         );
     }
